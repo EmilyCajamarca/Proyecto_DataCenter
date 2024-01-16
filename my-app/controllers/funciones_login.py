@@ -22,7 +22,7 @@ def recibeInsertRegisterUser(cedula, name, surname, id_area, id_rol, pass_user,E
                 with conexion_MySQLdb.cursor(dictionary=True) as mycursor:
                     sql = """
                     INSERT INTO usuarios(cedula, nombre_usuario, apellido_usuario, id_area, id_rol, password,Edad) 
-                    VALUES (%s, %s, %s, %s, %s, %s)
+                    VALUES (%s, %s, %s, %s, %s, %s,%s)
                     """
                     valores = (cedula, name, surname, id_area, id_rol, nueva_password, Edad)
                     mycursor.execute(sql, valores)
