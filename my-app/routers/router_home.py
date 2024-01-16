@@ -98,4 +98,3 @@ def updateArea():
             return "Hubo un error al actualizar el área."
 
     return redirect(url_for('lista_areas'))
-    

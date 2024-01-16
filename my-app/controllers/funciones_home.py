@@ -128,7 +128,7 @@ def lista_usuariosBD():
     try:
         with connectionBD() as conexion_MySQLdb:
             with conexion_MySQLdb.cursor(dictionary=True) as cursor:
-                querySQL = "SELECT id_usuario, cedula, nombre_usuario, apellido_usuario, id_area, id_rol, Edad FROM usuarios"
+                querySQL = "SELECT id_usuario, cedula, nombre_usuario, apellido_usuario, id_area, id_rol,Edad FROM usuarios"
                 cursor.execute(querySQL,)
                 usuariosBD = cursor.fetchall()
         return usuariosBD
@@ -270,4 +270,3 @@ def actualizarArea(area_id, area_name):
         
     except Exception as e:
         return f'Se produjo un error al actualizar el área: {str(e)}'
-    
